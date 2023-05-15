@@ -1,0 +1,102 @@
+package Matrix;
+
+import java.util.Scanner;
+
+public class MultiplyTwoMatrix {
+	static int index1 = 0;
+	static int index2 = 2;
+	static int index3 = 2;
+	static float[][] matrixA2 = new float[0][index2];
+	static float[][] matrixB2 = new float[0][index2];
+	static float[][] matrixA = new float[][] { { 1, 2, 3 } };
+	static float[][] matrixB = new float[][] { { 1, 2, 3 }, { 1, 2, 3 }, { 1, 2, 3 } };
+	static Scanner sc = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		// matrixA = inputMatrix(index1, index2, matrixA);
+		// matrixB = inputMatrix(index2, index3, matrixB);
+		// matrixA={{1,2,3}};
+		// matrixB={{1,2,3},{1,2,3},{1,2,3}};
+		double[][] multipliedMatrix = new double[index1][index3];
+		for (int a = 0; a < index1; a++) {
+			for (int b = 0; b < index3; b++) {
+				matrixA2 = takeFirstMatrix(a);
+				System.out.println("Ma tran A2:");
+				printFloatMatrix(0, index2, matrixA2);
+				matrixB2 = takeSecondMatrix(b);
+				System.out.println("Ma tran B2:");
+				printFloatMatrix(0, index2, matrixB2);
+				multipliedMatrix[a][b] = sumproduct(matrixA2, matrixB2);
+				
+			}
+		}
+		System.out.println("Ma tran ket qua cuoi cung la:");
+		printMatrix(index1, index3, multipliedMatrix);
+
+	}
+
+	// private static float[][] inputMatrix(int row, int col, float[][] matrixx) {
+
+	// System.out.println("Nhap mot ma tran:");
+	// for (int i = 0; i < row; i++) {
+	// for (int j = 0; j < col; j++) {
+	// System.out.println("Nhap phan tu thu " + i + " " + j);
+	// matrixx[i][j] = Float.parseFloat(sc.nextLine());
+	// }
+	// }
+
+	// return matrixx;
+	// }
+
+	private static float[][] takeFirstMatrix(int a) {
+		for (int i = 0; i < index2; i++) {
+			System.out.println("i " + i + " index1 " + index1);
+			matrixA2[0][i] = matrixA[a][i];
+			System.out.println("a=" + a + "i =" + i + " matrixA[a][i] " + matrixA[a][i]);
+		}
+		return matrixA2;
+	}
+
+	private static float[][] takeSecondMatrix(int b) {
+		for (int i = 0; i < index2; i++) {
+			matrixB2[0][i] = matrixB[i][b];
+		}
+		return matrixB2;
+	}
+
+	protected static double sumproduct(float[][] matrixA2, float[][] matrixB2) {
+		double product = 0;
+		for (int i = 0; i < index2; i++) {
+			product += (matrixA2[0][i] * matrixB2[0][i]);
+		}
+		return product;
+	}
+
+	private static void printMatrix(int row, int col, double[][] matrixToPrint) {
+		System.out.println("Ma tran ket qua la: ");
+		System.out.println();
+		for (int i = 0; i < row; row++) {
+			for (int j = 0; j < col; col++) {
+
+				System.out.println(matrixToPrint[i][j] + " ");
+			}
+			System.out.println();
+
+		}
+		return;
+	}
+
+	private static void printFloatMatrix(int row, int col, float[][] matrixToPrint) {
+		System.out.println("Ma tran ket qua la: ");
+		System.out.println();
+		for (int i = 0; i < row; row++) {
+			for (int j = 0; j < col; col++) {
+
+				System.out.println(matrixToPrint[i][j] + " ");
+			}
+			System.out.println();
+
+		}
+		return;
+	}
+}

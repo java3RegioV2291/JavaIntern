@@ -1,0 +1,28 @@
+package NotiKhongLuu;
+
+public abstract class AirObj {
+
+	String type; 
+	String index;
+	boolean receivedNotiFromMaybay;
+	protected void setIndex(String _index) {		
+		this.index = _index;
+	}
+	protected String getType() {
+		return this.type;
+	}
+	protected String getIndex() {
+		return this.index;
+	}
+	
+	protected void receiveNoti (ThucTheAir fromThucThe, ThucTheAir toThucThe, String noti) {
+		System.out.println(" "+ fromThucThe.getType() + " " + noti +"+ from " + fromThucThe.getType() +fromThucThe.getIndex()  );
+		if (fromThucThe.type =="plane") {
+			receivedNotiFromMaybay = true; 
+		} else receivedNotiFromMaybay = false; 
+		
+		}
+	
+	protected abstract void sendNoti ();
+}
+}

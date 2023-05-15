@@ -1,0 +1,25 @@
+package NotiKhongLuu;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class AirflowStation extends AirObj {
+
+	this.type="airflow station";
+	
+
+	// receivedNotiFromMaybay
+
+	protected static void senNotiToAllPlanes (List<Plane> listOfPlanes, String noti) {
+		
+	for (Plane plane: listOfPlanes) {
+		plane.receiveNoti(this,noti);
+	}
+	
+	}
+
+	protected void sendNoti(Plane fromPlane, Plane toPlane, String noti) {	 // gui tu khong luu den may bay dich
+		toPlane.receiveNoti(this,noti);		
+	}
+}

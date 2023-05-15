@@ -1,0 +1,10 @@
+package ShowbizPeople;
+
+public class Follower extends AbstractPeople2 {
+	boolean alreadyReceivedNoti;
+
+	protected void receiveNoti(String _fromKOLA) {
+		System.out.println("I have received a notification from " + _fromKOLA);
+		this.alreadyReceivedNoti = true;
+	}
+}

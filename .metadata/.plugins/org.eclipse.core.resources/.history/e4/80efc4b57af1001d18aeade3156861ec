@@ -1,0 +1,21 @@
+package NotiKhongLuu;
+
+import java.util.List;
+
+public class Main {
+	public static void main(String[] args) {
+		AirflowStation station1 = new AirflowStation();
+		Plane plane1 = new Plane();
+		plane1.setIndex("1");
+		Plane plane2 = new Plane();
+		plane2.setIndex("2");
+
+		List<Plane> listOfPlanes = new ArrayList<>();
+		listOfPlanes.add(plane1);
+		listOfPlanes.add(plane2);
+		station1.sendNotiToAllPlanes(listOfPlanes, "My connection is not stable but even stupid");
+
+		return;
+
+	}
+}

@@ -1,0 +1,9 @@
+package NotiKhongLuu;
+
+public class Main {
+	airflowStation station1 = new airflowStation();
+	plane plane1= new MayBay();
+	maybay1.setIndex(1);
+	
+	
+}

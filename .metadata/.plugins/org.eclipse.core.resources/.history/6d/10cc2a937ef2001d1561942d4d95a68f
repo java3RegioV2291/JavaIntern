@@ -1,0 +1,10 @@
+package Software;
+import Device.SmartDevice;
+public class Main {
+ 
+	public static void main (String[] args) {
+		Laptop laptop1= new Laptop();
+		BankingApp bankingApp1= new BankingApp (laptop1);
+		bankingApp1.runTransaction();
+	}
+}

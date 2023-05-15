@@ -1,0 +1,6 @@
+package Bridge;
+
+public enum Language {
+
+	English, Spain, Thai, Chinese, Vietnamese;
+}

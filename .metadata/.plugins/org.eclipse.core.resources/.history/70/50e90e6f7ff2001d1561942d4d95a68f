@@ -1,0 +1,17 @@
+package Software;
+import Device.SmartDevice.Laptop;
+import Device.SmartDevice.SmartPhone;
+public class Main {
+ 
+	public static void main (String[] args) {
+		Laptop laptop1= new Laptop();
+		SmartPhone smartPhone1= new SmartPhone();
+		
+		laptop1.turnOn();
+		laptop1.hasWifi=true;
+		BankingApp bankingApp1= new BankingApp (laptop1);
+		bankingApp1.runTransaction();
+		BankingApp2 bankingApp2= new BankingApp2 (smartPhone1);
+		bankingApp2.runTransaction();
+	}
+}

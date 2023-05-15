@@ -1,0 +1,14 @@
+package Bridge;
+import Device.SmartDevice;
+public class PriceySmartPhone extends SmartPhone {	
+
+	    public PriceySmartPhone(SmartDevice smartDevice) {
+	        super.smartDevice = smartDevice;
+	    }
+
+	    public void setTwoLanguages(Language _language1, Language _language2) {
+	        	this.language1=_language1;
+	        	this.language2=_language2;
+	        	System.out.println();
+	    }
+}

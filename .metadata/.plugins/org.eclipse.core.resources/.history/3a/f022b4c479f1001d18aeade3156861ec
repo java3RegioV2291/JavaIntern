@@ -1,0 +1,11 @@
+package NotiKhongLuu;
+
+public class Plane {
+
+	this.type="plane";	
+	protected void sendNoti ( TramKhongLuu2 toTramKhongLuu, MayBay maybay, String noti) {
+			System.out.println( this.getType()+this.getIndex() +" Sent noti:  " + noti +"+ via " + toTramKhongLuu.getType()+ toTramKhongLuu.getIndex()+ " target at"+ toPlane.getType() );
+		
+	}
+
+}

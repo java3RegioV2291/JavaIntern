@@ -1,0 +1,21 @@
+package ShowbizPeople;
+
+public class ShowBizWorld {
+	public static void main(String[] args) {
+		KOL HaLinh = new KOL();
+		HaLinh.setGeneralInfor("Hà Linh", 25);
+		HaLinh.publishPost();
+
+		Follower follower1 = new Follower();
+		Follower follower2 = new Follower();
+		Follower follower3 = new Follower();
+
+		if (HaLinh.hasNewPost) {
+			follower1.receiveNoti(HaLinh.name);
+			follower2.receiveNoti(HaLinh.name);
+			follower3.receiveNoti(HaLinh.name);
+		}
+		return;
+	}
+
+}

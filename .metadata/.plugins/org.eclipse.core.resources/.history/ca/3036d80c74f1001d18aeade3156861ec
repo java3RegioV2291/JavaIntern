@@ -1,0 +1,27 @@
+package NotiKhongLuu;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class airflowStation {
+
+	this.type= "airflow station";
+	List<plane> listOfPlanes = new ArrayList<>();	
+	
+	//receivedNotiFromMaybay
+	
+	protected void senNotiToAllPlanes () {
+		tramKhongLuu
+	for (MayBay maybay: listOfMayBay) {
+		maybay.receiveNoti(,maybay);
+	}
+	
+	else return;
+	}
+	
+	protected void sendNoti(ThucTheAir fromThucThe, ThucTheAir toThucThe) {	 // gui tu khong luu den may bay dich
+		if (this.receivedNotiFromMaybay) {
+		System.out.println("");
+	}
+	}
+}

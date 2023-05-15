@@ -1,0 +1,13 @@
+package NotiKhongLuu;
+
+public class Plane extends AirObj {
+	
+	this.type="plane";
+	
+	@Override 	
+	protected void sendNoti (AirflowStation midStation, Plane toPlane, String noti) { 
+		System.out.println( this.getFullName() +" Sent noti:  " + noti +"+ via " + midStation.getFullName()+ " target at"+ toPlane.getFullName() );
+		midStation.sendNoti(this,toPlane,noti);
+	}
+	
+}

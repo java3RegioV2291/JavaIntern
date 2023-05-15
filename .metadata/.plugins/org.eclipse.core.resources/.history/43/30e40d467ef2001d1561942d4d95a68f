@@ -1,0 +1,5 @@
+package Software;
+
+public interface Software1 {
+
+}

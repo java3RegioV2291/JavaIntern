@@ -1,0 +1,11 @@
+package NotiKhongLuu;
+
+public class MayBay extends ThucTheAir {
+	
+	this.type = "may bay";
+	//listOfMayBay
+	protected void sendNoti (ThucTheAir fromThucThe, ThucTheAir toThucThe, String noti) {
+		System.out.println( this.getType()+this.getIndex() +" Sent noti:  " + noti +"+  from " + fromThucThe.getType()+ fromThucThe.getIndex() );
+	
+	}
+}

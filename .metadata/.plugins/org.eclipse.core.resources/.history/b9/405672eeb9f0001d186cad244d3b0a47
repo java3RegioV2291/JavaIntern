@@ -1,0 +1,9 @@
+package NotiKhongLuu;
+
+public class Main {
+	TramKhongLuu2 tramKhongLuu = new TramKhongLuu2();
+	MayBay maybay1= new MayBay();
+	maybay1.setIndex(1);
+	
+	
+}

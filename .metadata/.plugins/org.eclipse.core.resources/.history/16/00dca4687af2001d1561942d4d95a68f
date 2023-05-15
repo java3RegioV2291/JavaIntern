@@ -1,0 +1,14 @@
+package Software;
+
+public class BankingApp implements Software1 {
+	private long cashBalance;
+	public void runTransaction() {
+		System.out.println("");
+	}
+	public void checkTransaction(int debit) {
+		if ((this.cashBalance>0) && (debit<cashBalance)) {
+			System.out.println("Valid transaction");
+		} else System.out.println("Invalid transaction, not enough money!");
+		
+	}
+}

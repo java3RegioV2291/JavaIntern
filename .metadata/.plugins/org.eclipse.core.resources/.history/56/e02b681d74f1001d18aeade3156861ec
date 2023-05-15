@@ -1,0 +1,25 @@
+package NotiKhongLuu;
+import java.util.List;
+import java.util.ArrayList;
+
+public class TramKhongLuu2 extends ThucTheAir{
+	this.type= "tram khong luu";
+	List<MayBay> listOfMayBay = new ArrayList<>();	
+	
+	//receivedNotiFromMaybay
+	
+	protected void senNotiToAllMayBay ( List <MayBay> listOfMayBay) {
+		tramKhongLuu
+	for (MayBay maybay: listOfMayBay) {
+		maybay.receiveNoti(,maybay);
+	}
+	
+	else return;
+	}
+	
+	protected void sendNoti(ThucTheAir fromThucThe, ThucTheAir toThucThe) {	 // gui tu khong luu den may bay dich
+		if (this.receivedNotiFromMaybay) {
+		System.out.println("");
+	}
+	}
+}

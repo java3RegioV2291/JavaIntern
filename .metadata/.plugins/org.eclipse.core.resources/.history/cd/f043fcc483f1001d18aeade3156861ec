@@ -1,0 +1,23 @@
+package NotiKhongLuu;
+import java.util.ArrayList;
+import java.util.List;
+
+public class AirflowStation extends AirObj {
+	protected void setType() {
+		this.type="airflow station";		
+	}
+			
+	protected void sendNoti(Plane fromPlane, Plane toPlane, String noti) {	 // gui tu khong luu den may bay dich
+		toPlane.receiveNoti(fromPlane,noti);	// nhận noti từ máy bay đầu tiên, ko care thằng mid
+		return;
+	}
+	public void sendNotiToAllPlanes (List<Plane> listOfPlanes, String noti){		
+		for (Plane plane: listOfPlanes) {
+			plane.receiveNoti(this,noti);//receive noti thì dễ dãi
+		}
+		System.out.println("Đã gửi đến tất cả máy bay");
+		
+	}
+	
+}
+

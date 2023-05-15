@@ -1,0 +1,17 @@
+package ShowbizPeople;
+
+public class Follower extends AbstractPeople2 {
+	// boolean isFollowingTiktoker;
+	boolean alreadyReceivedNoti;
+
+	protected void followKol(KOL kolToFollow) {
+		System.out.println(this.name + " đang follow Tiktoker" + kolToFollow.name);
+		// boolean isFollowingTiktoker = true;
+		if (kolToFollow.hasNewPost) {
+			System.out.println(this.name + " have received a notification from " + kolToFollow.name);
+			// this.alreadyReceivedNoti = true;
+		} else
+			return;
+	}
+
+}

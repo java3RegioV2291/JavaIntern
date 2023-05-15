@@ -1,0 +1,22 @@
+package Device;
+
+public interface SmartDevice {
+		
+	    boolean isTurnedOn();
+	    boolean isTurnedOff();
+	    
+	    void turnOn();
+
+	    void turnOff();
+
+	    float getWeight();
+
+	    void setWeight(int _weight);
+
+	    void connectWifi();
+
+	    void setLanguage(Language _language);
+
+	    void printStatus();
+	
+}

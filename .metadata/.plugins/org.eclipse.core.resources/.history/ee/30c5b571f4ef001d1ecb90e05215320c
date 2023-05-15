@@ -1,0 +1,13 @@
+package ShowbizPeople;
+
+public class KOL extends AbstractPeople2 {
+	protected boolean hasNewPost;
+	
+	protected void publishPost(String newPost) {	
+		System.out.println(this.getName() +" dang bai: " + newPost);
+		this.hasNewPost= true;
+		System.out.println("Tiktoker " + this.getName() + " vừa đăng bài mới");
+	}
+	
+	
+}
